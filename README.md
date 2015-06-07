@@ -3,7 +3,13 @@
 
 0) Recognize that if you use this library, anyone who looks at your webpage will be able to use your Twilio account SID and auth token.
 
-1) In `twilio_client.js`, modify lines 1&2
+1) Include `twilio_client.js` in your HTML code
+
+```html
+<script src="twilio_client.js"></script>
+```
+
+2) In `twilio_client.js`, modify lines 1&2
 
 ```js
 var TWILIO_ACCOUNT_SID = "XXX";
@@ -12,7 +18,7 @@ var TWILIO_AUTH_TOKEN = "YYY";
 
 so that it has your actual Twilio Account SID and Auth Token.
 
-2) Use the rest of the library as it were the [twilio node library](http://twilio.github.io/twilio-node/) except that the variable `client` is already defined for you because we will have already run this line for you:
+3) Use the rest of the library as it were the [twilio node library](http://twilio.github.io/twilio-node/) except that the variable `client` is already defined for you because we will have already run this line for you:
 
 ```js
 var client = require('twilio')('ACCOUNT_SID', 'AUTH_TOKEN');
@@ -56,3 +62,5 @@ client.makeCall({
 
 });
 ```
+
+See the rest of the [node documentation here](http://twilio.github.io/twilio-node/).
